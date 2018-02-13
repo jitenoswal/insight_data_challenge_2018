@@ -9,6 +9,15 @@
 
 This is my approach to solving Insight Data Challenge where we need to find transaction from repeat donors to committee/recipient based on Federcal Election Commission Data published on their public website.
 
+Imports required: 
+
+import sys
+import pandas as pd
+import numpy as np
+import os, errno
+import logging
+
+
 # Approach
 
 First thing, I think was important after doing data-validation was to figure out logic to find out Unique Repeat Donors. 
