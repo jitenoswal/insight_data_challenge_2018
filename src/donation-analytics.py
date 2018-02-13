@@ -131,7 +131,10 @@ def add_magic_uniq_identifier_col(clean_df):
 		uniq_donor = clean_df['NAME'] + '_' + clean_df['ZIP_CODE']						# UNIQ_DONOR: concat NAME+ZIPCODE identifier 
 		clean_df = pd.concat([clean_df, uniq_donor.rename('UNIQ_DONOR')], axis=1)	
 		Recipient_Id_ZC_Year = clean_df['CMTE_ID'] + '_' + clean_df['ZIP_CODE'] + '_' + clean_df['TRANSACTION_DT'] # RECIPIENT_ID_ZC_YEAR: concat CMTE_ID+ZIPCODE+YEAR identifier
-	
+		
+		# Logic to take care of out of order records. current >= previous
+		# Created a shifted df to as filter for only selecting records which follow this order
+		#
 		clean_df['TRANSACTION_DT'] = pd.to_numeric(clean_df['TRANSACTION_DT'], errors='coerce', downcast='integer')
 		shifted_trans_dt = clean_df.TRANSACTION_DT.shift(1)
 		shifted_trans_dt.iloc[0] = -99
