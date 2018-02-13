@@ -11,11 +11,11 @@ This is my approach to solving Insight Data Challenge where we need to find tran
 
 Imports required: 
 
-import sys
-import pandas as pd
-import numpy as np
-import os, errno
-import logging
+1. import sys
+2. import pandas as pd
+3. import numpy as np
+4. import os, errno
+5. import logging
 
 
 # Approach
