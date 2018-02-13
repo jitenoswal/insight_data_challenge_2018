@@ -15,9 +15,6 @@ First thing, I think was important after doing data-validation was to figure out
 Next, was to find a way list out transaction for each committee/recipient who received Unique Repeat Donors. 
 Also, figuring our alorigthm for calculating sum of donations at a given point received and xth percentile was the next 2 important things
 
-Data-Validation Done: 
-
-
 # Approximate Code (I can go over the code again if anyone has doubts)
 
 1. Data-Validation of all sorts 
@@ -26,11 +23,11 @@ Data-Validation Done:
 4. Use pandas duplicate api to find all repeat UNIQ_DONOR
 5. For row in data_frame
 	1. Check if Recipient_Id_ZC_Year exists in Recipient_dict
-         	1. Write “Recipient_Id | ZipCode | Year | perf30(row_amt, Recipient_dict_amt) | sum(row_amt + Recipient_dict_amt) | Recipient_HM_count ++”
+		1. Write “Recipient_Id | ZipCode | Year | perf30(row_amt, Recipient_dict_amt) | sum(row_amt + Recipient_dict_amt) | Recipient_HM_count ++”
 		2. Update Recipient_dict with new record
-    	2. Else
-         	1. Add Recipient_Id_ZC_Year, Recipient_Id, ZipCode, row_amt, 1 
-        	2. Write “Recipient_Id | ZipCode | Year | row_amt | row_amt | 1”
+	2. Else
+		1. Add Recipient_Id_ZC_Year, Recipient_Id, ZipCode, row_amt, 1 
+		2. Write “Recipient_Id | ZipCode | Year | row_amt | row_amt | 1”
 
 
 # Test Written
