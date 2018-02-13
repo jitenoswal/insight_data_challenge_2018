@@ -33,3 +33,8 @@ Data-Validation Done:
 
 
 # Test Written
+
+1. Covered basic setup test for missing input files and output filepath. 
+2. Column constraints are enforced appropriately. 
+3. 7 types of test inputs from 10kb (example provided by the team) and large files 1.25 Gigs from the Federal Commission website.
+
