@@ -24,18 +24,21 @@ First thing, I think was important after doing data-validation was to figure out
 Next, was to find a way list out transaction for each committee/recipient who received Unique Repeat Donors. 
 Also, figuring our alorigthm for calculating sum of donations at a given point received and xth percentile was the next 2 important things
 
-# Approximate Code (I can go over the code again if anyone has doubts)
+# Approximate Code 
 
-1. Data-Validation of all sorts 
+Note: I can go over the code again if anyone has doubts
+
+1. Data-Validation of all kinds
 2. Add new column to represent: Uniqueness of Donor was indirectly given to be used as a combination of Donor NAME & ZIP_CODE. 
 3. Add new column to represent: Uniqueness of Recipient was indirectly given to be used as a combination of CMTE_ID & ZIP_CODE & TRANSACTION_DT(Year).
-4. Use pandas duplicate api to find all repeat UNIQ_DONOR
-5. For row in data_frame
+4. Figureout out of order records by using TRANSACTION_DT_PREV <= TRANSACTION_DT_CURR in dataframe
+5. Use pandas duplicate api to find all repeat UNIQ_DONOR
+6. For row in data_frame
 	1. Check if Recipient_Id_ZC_Year exists in Recipient_dict
-		1. Write “Recipient_Id | ZipCode | Year | perf30(row_amt, Recipient_dict_amt) | sum(row_amt + Recipient_dict_amt) | Recipient_HM_count ++”
-		2. Update Recipient_dict with new record
+		1. Update Recipient_dict with new record
+		2. Write “Recipient_Id | ZipCode | Year | perc(Recipient_dict_amt_list, perc, len(Recipient_dict_amt_list)) | sum(row_amt + Recipient_dict_amt) | Recipient_HM_count ++”
 	2. Else
-		1. Add Recipient_Id_ZC_Year, Recipient_Id, ZipCode, row_amt, 1 
+		1. Add Recipient_Id_ZC_Year, Recipient_Id, ZipCode, row_amt_list, 1 
 		2. Write “Recipient_Id | ZipCode | Year | row_amt | row_amt | 1”
 
 
