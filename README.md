@@ -4,6 +4,7 @@
 2. [Approach](README.md#approach)
 3. [Approximate Code](README.md#approximate-Code)
 4. [Test Written](README.md#test-written)
+5. [Setup Test](README.md#setup-test)
 
 # Introduction
 
@@ -52,6 +53,17 @@ Input for test_4 is not uploaded as its a big file (1.25gb): https://cg-519a459a
 5. Test_5: 80% of the records in this tests don't satisfy our column constraints criteria. Rest 20% records are non repeat donor so output is actually a blank file. 
 6. Test_6: All 100% of the records in this tests don't satisfy our column constraints criteria eventually resulting into blank output file. 
 7. Test_7: Partially chunk of Test_4 Federal Election Commission file to validate output.  
+
+# Setup Test
+
+1. Check if input files (itcont.txt, perc.txt) exists
+2. Check if output file (repeat_donors.txt) path exists.
+3. Check if perc.txt file has exactly 1 Numeric value.
+
+
+P.S: I got distracted at the end as I got pulled into production issues at my current workplace. So in case any comments/code is confusing please let me know and I can add appropriate comments. 
+
+
 
 
 
