@@ -45,6 +45,7 @@ Also, figuring our alorigthm for calculating sum of donations at a given point r
 2. Test_2: Example 2 provided in challenge (Out of Order Record Handling by skipping it completely)
 3. Test_3: And updated version of Example 1
 4. Test_4: Real World data downloaded from Federal Election Commission for latest year 2017-2018 (1.25 Gb file has ~7+ million records): This takes about 4 minutes after many optimizations but given some more time I could further optimize it by either implementing a cython method or trying rolling_sum tricks of pandas.
+Input for test_4 is not uploaded as its a big file (1.25gb): https://cg-519a459a-0ea3-42c2-b7bc-fa1143481f74.s3-us-gov-west-1.amazonaws.com/bulk-downloads/2018/indiv18.zip
 5. Test_5: 80% of the records in this tests don't satisfy our column constraints criteria. Rest 20% records are non repeat donor so output is actually a blank file. 
 6. Test_6: All 100% of the records in this tests don't satisfy our column constraints criteria eventually resulting into blank output file. 
 7. Test_7: Partially chunk of Test_4 Federal Election Commission file to validate output.  
